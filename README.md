@@ -9,7 +9,7 @@
       <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" />
     </a>
     <a href="https://github.com/CypherPoet/AnimatableGradient/actions">
-      <img src="https://github.com/CypherPoet/AnimatableGradient/workflows/ci/badge.svg" />
+      <img src="https://github.com/CypherPoet/AnimatableGradient/workflows/Builds/badge.svg" />
     </a>
     <a href="https://twitter.com/cypher_poet">
         <img src="https://img.shields.io/badge/Contact-@cypher_poet-lightgrey.svg?style=flat" alt="Twitter: @cypher_poet" />
@@ -64,17 +64,34 @@ Then simply `import AnimatableGradient` wherever you’d like to use it.
 
 ## Usage
 
-The view modifiers exposed by `AnimatableGradient` all conform to its `AnimatableGradientModifier` protocol -- which looks like this:
+The view modifiers exposed by `AnimatableGradient` all conform to its `AnimatableGradientModifier` protocol.
+
+<details>
+<summary>AnimatableGradientModifier Protocol</summary>
 
 ```swift
+protocol AnimatableGradientModifier: AnimatableModifier {
+    associatedtype BaseShape: Shape
+    associatedtype GradientShapeStyle: ShapeStyle
+
+    var baseShape: BaseShape { get }
+    var startColors: [UIColor] { get }
+    var endColors: [UIColor] { get }
+
+    var completionPercentage: CGFloat { get set }
+
+    func gradientFill(in geometry: GeometryProxy) -> GradientShapeStyle
+}
 
 ```
 
+<details/>
+
 To use these modifiers, `AnimatableGradient` provides the following extensions on `View`s and `Shape`s:
 
--
--
--
+- animatableLinearGradient
+- animatableRadialGradient
+- animatableAngularGradient
 
 (More detailed explanations of each can be found below.)
 

@@ -9,6 +9,7 @@
 import SwiftUI
 import AnimatableGradient
 
+
 struct AngularGradientsExample {
     @Environment(\.colorScheme) private var colorScheme
 
