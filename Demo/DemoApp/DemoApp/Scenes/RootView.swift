@@ -28,10 +28,10 @@ extension RootView: View {
                     NavigationLink(destination: ViewsExample()) {
                         Text("Using with Views")
                     }
-                    
-                    NavigationLink(destination: ViewsExample()) {
-                        Text("Custom Gradient Directions")
-                    }
+//                    
+//                    NavigationLink(destination: ViewsExample()) {
+//                        Text("Custom Gradient Directions")
+//                    }
                 }
                 
                 Section(header: Text("Gradient Varieties")) {
