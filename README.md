@@ -85,7 +85,8 @@ protocol AnimatableGradientModifier: AnimatableModifier {
 
 ```
 
-<details/>
+</details>
+
 
 To use these modifiers, `AnimatableGradient` provides the following extensions on `View`s and `Shape`s:
 
