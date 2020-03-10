@@ -11,7 +11,7 @@ struct AnimatableRadialGradientModifier<BaseShape: Shape>: AnimatableGradientMod
     let startRadius: CGFloat?
     let endRadius: CGFloat?
     
-    var percentage: CGFloat
+    var completionPercentage: CGFloat
 }
 
 

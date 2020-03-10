@@ -9,7 +9,7 @@ extension View {
         endColors: [UIColor],
         startPoint: UnitPoint = .topLeading,
         endPoint: UnitPoint = .bottomTrailing,
-        percentage completionPercentage: CGFloat
+        completionPercentage: CGFloat
     ) -> some View {
         self.modifier(
             AnimatableLinearGradientModifier(
@@ -18,7 +18,7 @@ extension View {
                 endColors: endColors,
                 startPoint: startPoint,
                 endPoint: endPoint,
-                percentage: completionPercentage
+                completionPercentage: completionPercentage
             )
         )
     }

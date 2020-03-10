@@ -9,7 +9,7 @@ extension Shape {
         centerPoint: UnitPoint = .center,
         startRadius: CGFloat? = nil,
         endRadius: CGFloat? = nil,
-        percentage completionPercentage: CGFloat
+        completionPercentage: CGFloat
     ) -> some View {
         self.modifier(
             AnimatableRadialGradientModifier(
@@ -19,7 +19,7 @@ extension Shape {
                 centerPoint: centerPoint,
                 startRadius: startRadius,
                 endRadius: endRadius,
-                percentage: completionPercentage
+                completionPercentage: completionPercentage
             )
         )
     }

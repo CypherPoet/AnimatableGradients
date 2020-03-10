@@ -11,7 +11,7 @@ struct AnimatableLinearGradientModifier<BaseShape: Shape>: AnimatableGradientMod
     let startPoint: UnitPoint
     let endPoint: UnitPoint
     
-    var percentage: CGFloat
+    var completionPercentage: CGFloat
 }
 
 
