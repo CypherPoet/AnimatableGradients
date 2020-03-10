@@ -9,7 +9,7 @@ protocol AnimatableGradientModifier: AnimatableModifier {
     var startColors: [UIColor] { get }
     var endColors: [UIColor] { get }
  
-    var percentage: CGFloat { get set }
+    var completionPercentage: CGFloat { get set }
     
     func gradientFill(in geometry: GeometryProxy) -> GradientShapeStyle
 }
@@ -18,8 +18,8 @@ protocol AnimatableGradientModifier: AnimatableModifier {
 // MARK: - Animatable Data
 extension AnimatableGradientModifier {
     var animatableData: CGFloat {
-        get { percentage }
-        set { percentage = newValue }
+        get { completionPercentage }
+        set { completionPercentage = newValue }
     }
 }
 
@@ -42,7 +42,7 @@ extension AnimatableGradientModifier {
     
     var gradientColors: [Color] {
         zip(startColors, endColors).map { (startColor, endColor) in
-            startColor.interpolate(between: endColor, by: percentage)
+            startColor.interpolate(between: endColor, by: completionPercentage)
         }
     }
     
