@@ -35,7 +35,6 @@
 		F3A7B8EC2415BC7000B560C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F3A7B8EF2415BC7000B560C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3A7B8F12415BC7000B560C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3A7B8F72415BC9E00B560C9 /* SwiftUIAnimatableGradient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIAnimatableGradient; path = ../..; sourceTree = "<group>"; };
 		F3A7B8FE2415BE0D00B560C9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		F3A7B9002415BE6D00B560C9 /* ShapesExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesExample.swift; sourceTree = "<group>"; };
 		F3A7B902241628BD00B560C9 /* ViewsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsExample.swift; sourceTree = "<group>"; };
@@ -95,7 +94,7 @@
 			children = (
 				F3A7B8E22415BC6F00B560C9 /* DemoApp */,
 				F3A7B8E12415BC6F00B560C9 /* Products */,
-				F3A7B8F72415BC9E00B560C9 /* SwiftUIAnimatableGradient */,
+				F3A7B8F72415BC9E00B560C9 /* AnimatableGradient */,
 				F3A7B8F82415BCA900B560C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
