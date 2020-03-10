@@ -11,6 +11,8 @@ import AnimatableGradient
 
 
 struct ShapesExample {
+    @Environment(\.colorScheme) private var colorScheme
+
     @State var animationCompletion: CGFloat = 0.0
 }
 
@@ -27,7 +29,7 @@ extension ShapesExample: View {
                         endColors: Constants.Appearance.gradientEndColors,
                         completionPercentage: self.animationCompletion
                     )
-                    .shadow(color: .gray, radius: 14, x: 2, y: 2)
+                    .shadow(color: self.shadowColor, radius: 10, x: 3, y: 3)
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.35)
                    
                 
@@ -37,7 +39,7 @@ extension ShapesExample: View {
                         endColors: Constants.Appearance.gradientEndColors,
                         completionPercentage: self.animationCompletion
                     )
-                    .shadow(color: .gray, radius: 14, x: 2, y: 2)
+                    .shadow(color: self.shadowColor, radius: 10, x: 3, y: 3)
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.2)
 
                 
@@ -47,7 +49,7 @@ extension ShapesExample: View {
                         endColors: Constants.Appearance.gradientEndColors,
                         completionPercentage: self.animationCompletion
                     )
-                    .shadow(color: .gray, radius: 14, x: 2, y: 2)
+                    .shadow(color: self.shadowColor, radius: 10, x: 3, y: 3)
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.35)
             }
         }
@@ -69,6 +71,10 @@ extension ShapesExample: View {
 
 // MARK: - Computeds
 extension ShapesExample {
+    
+    var shadowColor: Color {
+        colorScheme == .dark ? .clear : Color.gray.opacity(0.77)
+    }
 }
 
 

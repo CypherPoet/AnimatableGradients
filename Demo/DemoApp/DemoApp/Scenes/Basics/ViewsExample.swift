@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import AnimatableGradient
 
 
 struct ViewsExample {
-    @State var animationCompletion: CGFloat = 0.0
+    @Environment(\.colorScheme) private var colorScheme
+
+    @State private var animationCompletion: CGFloat = 0.0
 }
 
 
@@ -68,6 +71,10 @@ extension ViewsExample: View {
 
 // MARK: - Computeds
 extension ViewsExample {
+    
+    var shadowColor: Color {
+        colorScheme == .dark ? .clear : Color.gray.opacity(0.77)
+    }
 }
 
 
