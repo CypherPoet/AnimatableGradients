@@ -21,29 +21,29 @@ extension RootView: View {
         NavigationView {
             List {
                 Section(header: Text("Basics")) {
-                    NavigationLink(destination: Example1()) {
+                    NavigationLink(destination: ShapesExample()) {
                         Text("Using with Shapes")
                     }
                     
-                    NavigationLink(destination: Example2()) {
+                    NavigationLink(destination: ViewsExample()) {
                         Text("Using with Views")
                     }
                     
-                    NavigationLink(destination: Example2()) {
+                    NavigationLink(destination: ViewsExample()) {
                         Text("Custom Gradient Directions")
                     }
                 }
                 
                 Section(header: Text("Gradient Varieties")) {
-                    NavigationLink(destination: Example2()) {
+                    NavigationLink(destination: LinearGradientsExample()) {
                         Text("Linear Gradients")
                     }
                     
-                    NavigationLink(destination: Example2()) {
+                    NavigationLink(destination: RadialGradientsExample()) {
                         Text("Radial Gradients")
                     }
                     
-                    NavigationLink(destination: Example2()) {
+                    NavigationLink(destination: ViewsExample()) {
                         Text("Angular Gradients")
                     }
                 }

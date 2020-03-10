@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F39A554C241725E7002E8AD2 /* AnimatableGradient in Frameworks */ = {isa = PBXBuildFile; productRef = F39A554B241725E7002E8AD2 /* AnimatableGradient */; };
+		F39A555024174423002E8AD2 /* LinearGradientsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A554F24174423002E8AD2 /* LinearGradientsExample.swift */; };
+		F39A55542417498E002E8AD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A55532417498E002E8AD2 /* Constants.swift */; };
+		F39A55562417499C002E8AD2 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A55552417499C002E8AD2 /* Appearance.swift */; };
 		F3A7B8E42415BC6F00B560C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B8E32415BC6F00B560C9 /* AppDelegate.swift */; };
 		F3A7B8E62415BC6F00B560C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B8E52415BC6F00B560C9 /* SceneDelegate.swift */; };
 		F3A7B8E82415BC6F00B560C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B8E72415BC6F00B560C9 /* ContentView.swift */; };
@@ -15,12 +18,15 @@
 		F3A7B8ED2415BC7000B560C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A7B8EC2415BC7000B560C9 /* Preview Assets.xcassets */; };
 		F3A7B8F02415BC7000B560C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A7B8EE2415BC7000B560C9 /* LaunchScreen.storyboard */; };
 		F3A7B8FF2415BE0D00B560C9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B8FE2415BE0D00B560C9 /* RootView.swift */; };
-		F3A7B9012415BE6D00B560C9 /* Example1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B9002415BE6D00B560C9 /* Example1.swift */; };
-		F3A7B903241628BD00B560C9 /* Example2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B902241628BD00B560C9 /* Example2.swift */; };
-		F3A7B90524163F2700B560C9 /* Example4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B90424163F2700B560C9 /* Example4.swift */; };
+		F3A7B9012415BE6D00B560C9 /* ShapesExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B9002415BE6D00B560C9 /* ShapesExample.swift */; };
+		F3A7B903241628BD00B560C9 /* ViewsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B902241628BD00B560C9 /* ViewsExample.swift */; };
+		F3A7B90524163F2700B560C9 /* RadialGradientsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B90424163F2700B560C9 /* RadialGradientsExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F39A554F24174423002E8AD2 /* LinearGradientsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientsExample.swift; sourceTree = "<group>"; };
+		F39A55532417498E002E8AD2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F39A55552417499C002E8AD2 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		F3A7B8E02415BC6F00B560C9 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A7B8E32415BC6F00B560C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A7B8E52415BC6F00B560C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,9 +37,9 @@
 		F3A7B8F12415BC7000B560C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3A7B8F72415BC9E00B560C9 /* SwiftUIAnimatableGradient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIAnimatableGradient; path = ../..; sourceTree = "<group>"; };
 		F3A7B8FE2415BE0D00B560C9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		F3A7B9002415BE6D00B560C9 /* Example1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1.swift; sourceTree = "<group>"; };
-		F3A7B902241628BD00B560C9 /* Example2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example2.swift; sourceTree = "<group>"; };
-		F3A7B90424163F2700B560C9 /* Example4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example4.swift; sourceTree = "<group>"; };
+		F3A7B9002415BE6D00B560C9 /* ShapesExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesExample.swift; sourceTree = "<group>"; };
+		F3A7B902241628BD00B560C9 /* ViewsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsExample.swift; sourceTree = "<group>"; };
+		F3A7B90424163F2700B560C9 /* RadialGradientsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradientsExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F39A554D24173527002E8AD2 /* Basics */ = {
+			isa = PBXGroup;
+			children = (
+				F3A7B902241628BD00B560C9 /* ViewsExample.swift */,
+				F3A7B9002415BE6D00B560C9 /* ShapesExample.swift */,
+			);
+			path = Basics;
+			sourceTree = "<group>";
+		};
+		F39A554E241735A5002E8AD2 /* Gradient Varieties */ = {
+			isa = PBXGroup;
+			children = (
+				F3A7B90424163F2700B560C9 /* RadialGradientsExample.swift */,
+				F39A554F24174423002E8AD2 /* LinearGradientsExample.swift */,
+			);
+			path = "Gradient Varieties";
+			sourceTree = "<group>";
+		};
+		F39A555124174961002E8AD2 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				F39A555224174968002E8AD2 /* Constants */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		F39A555224174968002E8AD2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F39A55532417498E002E8AD2 /* Constants.swift */,
+				F39A55552417499C002E8AD2 /* Appearance.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		F3A7B8D72415BC6F00B560C9 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +110,7 @@
 		F3A7B8E22415BC6F00B560C9 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				F39A555124174961002E8AD2 /* Reusables */,
 				F3A7B8FD2415BCBD00B560C9 /* Resources */,
 				F3A7B8FC2415BCB800B560C9 /* App */,
 				F3A7B8FB2415BCB100B560C9 /* Scenes */,
@@ -99,9 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				F3A7B8FE2415BE0D00B560C9 /* RootView.swift */,
-				F3A7B902241628BD00B560C9 /* Example2.swift */,
-				F3A7B90424163F2700B560C9 /* Example4.swift */,
-				F3A7B9002415BE6D00B560C9 /* Example1.swift */,
+				F39A554E241735A5002E8AD2 /* Gradient Varieties */,
+				F39A554D24173527002E8AD2 /* Basics */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -197,13 +238,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3A7B90524163F2700B560C9 /* Example4.swift in Sources */,
+				F3A7B90524163F2700B560C9 /* RadialGradientsExample.swift in Sources */,
 				F3A7B8FF2415BE0D00B560C9 /* RootView.swift in Sources */,
-				F3A7B903241628BD00B560C9 /* Example2.swift in Sources */,
+				F3A7B903241628BD00B560C9 /* ViewsExample.swift in Sources */,
 				F3A7B8E42415BC6F00B560C9 /* AppDelegate.swift in Sources */,
 				F3A7B8E62415BC6F00B560C9 /* SceneDelegate.swift in Sources */,
-				F3A7B9012415BE6D00B560C9 /* Example1.swift in Sources */,
+				F39A55562417499C002E8AD2 /* Appearance.swift in Sources */,
+				F3A7B9012415BE6D00B560C9 /* ShapesExample.swift in Sources */,
 				F3A7B8E82415BC6F00B560C9 /* ContentView.swift in Sources */,
+				F39A555024174423002E8AD2 /* LinearGradientsExample.swift in Sources */,
+				F39A55542417498E002E8AD2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
