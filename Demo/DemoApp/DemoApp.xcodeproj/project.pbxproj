@@ -28,6 +28,8 @@
 		F39A55532417498E002E8AD2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F39A55552417499C002E8AD2 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		F39A555724177CC6002E8AD2 /* AngularGradientsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngularGradientsExample.swift; sourceTree = "<group>"; };
+		F39A55592417B619002E8AD2 /* SwiftUIAnimatableGradient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIAnimatableGradient; path = ../..; sourceTree = "<group>"; };
+		F39A555A2417B62C002E8AD2 /* SwiftUIAnimatableGradient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIAnimatableGradient; path = ../..; sourceTree = "<group>"; };
 		F3A7B8E02415BC6F00B560C9 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A7B8E32415BC6F00B560C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A7B8E52415BC6F00B560C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,9 +94,9 @@
 		F3A7B8D72415BC6F00B560C9 = {
 			isa = PBXGroup;
 			children = (
+				F39A555A2417B62C002E8AD2 /* SwiftUIAnimatableGradient */,
 				F3A7B8E22415BC6F00B560C9 /* DemoApp */,
 				F3A7B8E12415BC6F00B560C9 /* Products */,
-				F3A7B8F72415BC9E00B560C9 /* AnimatableGradient */,
 				F3A7B8F82415BCA900B560C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -132,6 +134,7 @@
 		F3A7B8F82415BCA900B560C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F39A55592417B619002E8AD2 /* SwiftUIAnimatableGradient */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

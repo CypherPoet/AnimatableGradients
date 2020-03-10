@@ -1,3 +1,5 @@
+#if os(iOS) || os(tvOS)
+
 import SwiftUI
 
 
@@ -38,3 +40,5 @@ extension UIColor {
         )
     }
 }
+
+#endif

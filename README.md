@@ -36,6 +36,7 @@ _A SwiftUI View Modifier for creating gradients with animated colors_.
 - [x] Interpolate between as many start and end colors as you want.
 
 
+
 ## Requirements
 
 - iOS 13.0+
@@ -154,11 +155,16 @@ But now for some more detail...
 #### Usage on Views
 
 
+
 ## Contributing
 
 Contributions to `MyLibrary` are most welcome. Check out some of the [issue templates](./.github/ISSUE_TEMPLATE/) for more info.
 
 
+
+## Roadmap
+
+- Mac Catalyst Support ?
 
 
 

@@ -1,3 +1,6 @@
+#if os(iOS) || os(tvOS)
+
+
 import SwiftUI
 
 
@@ -49,3 +52,6 @@ extension View {
         )
     }
 }
+
+#endif
+

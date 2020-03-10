@@ -1,3 +1,6 @@
+#if os(iOS) || os(tvOS)
+
+
 import SwiftUI
 
 
@@ -25,3 +28,5 @@ extension AnimatableLinearGradientModifier {
         )
     }
 }
+
+#endif
