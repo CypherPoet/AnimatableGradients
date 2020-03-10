@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "MyLibrary"
-               BuildableName = "MyLibrary"
-               BlueprintName = "MyLibrary"
+               BlueprintIdentifier = "AnimatableGradient"
+               BuildableName = "AnimatableGradient"
+               BlueprintName = "AnimatableGradient"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "MyLibraryTests"
-               BuildableName = "MyLibraryTests"
-               BlueprintName = "MyLibraryTests"
+               BlueprintIdentifier = "AnimatableGradientTests"
+               BuildableName = "AnimatableGradientTests"
+               BlueprintName = "AnimatableGradientTests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "MyLibraryTests"
-               BuildableName = "MyLibraryTests"
-               BlueprintName = "MyLibraryTests"
+               BlueprintIdentifier = "AnimatableGradientTests"
+               BuildableName = "AnimatableGradientTests"
+               BlueprintName = "AnimatableGradientTests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
@@ -74,9 +74,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "MyLibrary"
-            BuildableName = "MyLibrary"
-            BlueprintName = "MyLibrary"
+            BlueprintIdentifier = "AnimatableGradient"
+            BuildableName = "AnimatableGradient"
+            BlueprintName = "AnimatableGradient"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>

@@ -1,9 +1,8 @@
-# MyLibrary
+# AnimatableGradient
 
 <p>
     <img src="https://img.shields.io/badge/Swift-5.1-F06C33.svg" />
     <img src="https://img.shields.io/badge/iOS-13.0+-865EFC.svg" />
-    <img src="https://img.shields.io/badge/macOS-10.15+-E65EFC.svg" />
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
     <a href="https://github.com/apple/swift-package-manager">
       <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" />
@@ -14,27 +13,25 @@
 </p>
 
 
-_[[ A brief synopsis of this library ]]_.
-
-[[ Optionally, a longer description of this package. ]]
+_A SwiftUI View Modifier for creating gradients with animated colors_.
 
 
 
 ## Installation
 
-`MyLibrary` can be used through the Swift Package Manager. You can add it as a dependency in your `Package.swift` file:
+`AnimatableGradient` can be used through the Swift Package Manager. You can add it as a dependency in your `Package.swift` file:
 
 ```swift
 let package = Package(
     //...
     dependencies: [
-        .package(url: "https://github.com/CypherPoet/MyLibrary", .branch("master")),
+        .package(url: "https://github.com/CypherPoet/AnimatableGradient", .branch("master")),
     ],
     //...
 )
 ```
 
-Then simply `import MyLibrary` wherever you’d like to use it.
+Then simply `import AnimatableGradient` wherever you’d like to use it.
 
 
 ## Usage
@@ -42,4 +39,4 @@ Then simply `import MyLibrary` wherever you’d like to use it.
 
 ## License
 
-MyLibrary is available under the MIT license. See the [LICENSE file](./LICENSE) for more info.
+AnimatableGradient is available under the MIT license. See the [LICENSE file](./LICENSE) for more info.
