@@ -1,3 +1,6 @@
+#if os(iOS) || os(tvOS)
+
+
 import SwiftUI
 
 
@@ -7,9 +10,9 @@ struct AnimatableRadialGradientModifier<BaseShape: Shape>: AnimatableGradientMod
     let startColors: [UIColor]
     let endColors: [UIColor]
     
-    let centerPoint: UnitPoint
-    let startRadius: CGFloat?
-    let endRadius: CGFloat?
+    var centerPoint: UnitPoint = .center
+    var startRadius: CGFloat? = nil
+    var endRadius: CGFloat? = nil
     
     var completionPercentage: CGFloat
 }
@@ -29,3 +32,5 @@ extension AnimatableRadialGradientModifier {
         )
     }
 }
+
+#endif

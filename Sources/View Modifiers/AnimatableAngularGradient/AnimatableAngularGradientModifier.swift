@@ -1,3 +1,6 @@
+#if os(iOS) || os(tvOS)
+
+
 import SwiftUI
 
 
@@ -7,9 +10,13 @@ struct AnimatableAngularGradientModifier<BaseShape: Shape>: AnimatableGradientMo
     let startColors: [UIColor]
     let endColors: [UIColor]
     
-    let centerPoint: UnitPoint
-    let startAngle: Angle
-    let endAngle: Angle
+    var centerPoint: UnitPoint = .center
+    var startAngle: Angle = .zero
+    var endAngle: Angle = .radians(2 * .pi)
+    
+    /// Setting this property will cause the gradient to being at the specified offset, and
+    /// then span the entire circumference.
+    var fullSpanStartAngle: Angle? = nil
     
     var completionPercentage: CGFloat
 }
@@ -18,11 +25,17 @@ struct AnimatableAngularGradientModifier<BaseShape: Shape>: AnimatableGradientMo
 extension AnimatableAngularGradientModifier {
     
     func gradientFill(in geometry: GeometryProxy) -> some ShapeStyle {
-        AngularGradient(
-            gradient: gradient,
-            center: centerPoint,
-            startAngle: startAngle,
-            endAngle: endAngle
-        )
+        if let fullSpanStartAngle = fullSpanStartAngle {
+            return AngularGradient(gradient: gradient, center: centerPoint, angle: fullSpanStartAngle)
+        } else {
+            return AngularGradient(
+                gradient: gradient,
+                center: centerPoint,
+                startAngle: startAngle,
+                endAngle: endAngle
+            )
+        }
     }
 }
+
+#endif

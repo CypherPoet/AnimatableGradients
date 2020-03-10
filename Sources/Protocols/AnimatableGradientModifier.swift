@@ -1,3 +1,6 @@
+#if os(iOS) || os(tvOS)
+
+
 import SwiftUI
 
 
@@ -53,3 +56,5 @@ extension AnimatableGradientModifier {
 }
 
 
+
+#endif

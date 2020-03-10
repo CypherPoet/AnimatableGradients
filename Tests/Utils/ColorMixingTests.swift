@@ -1,3 +1,6 @@
+#if os(iOS) || os(tvOS)
+
+
 import Foundation
 import SwiftUI
 import XCTest
@@ -26,3 +29,5 @@ extension ColorMixingTests {
         let interpolated = UIColor.red.interpolate(between: .blue, by: 0.5)
     }
 }
+
+#endif

@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import AnimatableGradient
 
 
 struct LinearGradientsExample {
-    @State var animationCompletion: CGFloat = 0.0
+    @Environment(\.colorScheme) private var colorScheme
+    
+    @State private var animationCompletion: CGFloat = 0.0
 }
 
 
@@ -26,7 +29,7 @@ extension LinearGradientsExample: View {
                         endColors: Constants.Appearance.gradientEndColors,
                         completionPercentage: self.animationCompletion
                     )
-                    .shadow(color: .gray, radius: 14, x: 2, y: 2)
+                    .shadow(color: self.shadowColor, radius: 10, x: 3, y: 3)
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.35)
                    
                 
@@ -38,7 +41,7 @@ extension LinearGradientsExample: View {
                         endPoint: .topTrailing,
                         completionPercentage: self.animationCompletion
                     )
-                    .shadow(color: .gray, radius: 14, x: 2, y: 2)
+                    .shadow(color: self.shadowColor, radius: 10, x: 3, y: 3)
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.2)
 
                 
@@ -50,7 +53,7 @@ extension LinearGradientsExample: View {
                         endPoint: .bottom,
                         completionPercentage: self.animationCompletion
                     )
-                    .shadow(color: .gray, radius: 14, x: 2, y: 2)
+                    .shadow(color: self.shadowColor, radius: 10, x: 3, y: 3)
                     .frame(width: geometry.size.width, height: geometry.size.height * 0.35)
             }
         }
@@ -72,6 +75,10 @@ extension LinearGradientsExample: View {
 
 // MARK: - Computeds
 extension LinearGradientsExample {
+    
+    var shadowColor: Color {
+        colorScheme == .dark ? .clear : Color.gray.opacity(0.77)
+    }
 }
 
 
@@ -96,8 +103,17 @@ private extension LinearGradientsExample {
 struct LinearGradientsExample_Previews: PreviewProvider {
 
     static var previews: some View {
-        NavigationView {
-            LinearGradientsExample()
+        Group {
+            NavigationView {
+                LinearGradientsExample()
+            }
+            .colorScheme(.dark)
+            
+            
+            NavigationView {
+                LinearGradientsExample()
+            }
+            .colorScheme(.light)
         }
     }
 }

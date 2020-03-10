@@ -1,3 +1,6 @@
+#if os(iOS) || os(tvOS)
+
+
 import SwiftUI
 
 
@@ -24,3 +27,7 @@ extension Shape {
         )
     }
 }
+
+
+#endif
+

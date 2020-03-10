@@ -1,3 +1,6 @@
+#if os(iOS) || os(tvOS)
+
+
 import SwiftUI
 
 
@@ -8,8 +11,8 @@ struct AnimatableLinearGradientModifier<BaseShape: Shape>: AnimatableGradientMod
     let startColors: [UIColor]
     let endColors: [UIColor]
     
-    let startPoint: UnitPoint
-    let endPoint: UnitPoint
+    var startPoint: UnitPoint = .topLeading
+    var endPoint: UnitPoint = .bottomTrailing
     
     var completionPercentage: CGFloat
 }
@@ -25,3 +28,5 @@ extension AnimatableLinearGradientModifier {
         )
     }
 }
+
+#endif
