@@ -1,0 +1,37 @@
+//
+//  See LICENSE folder for this template’s licensing information.
+//
+//  Abstract:
+//  Provide build settings which make a static library target build a .playgroundmodule.
+//
+
+//
+//  The build settings in this file typically should *not* be edited or overridden in the module target.
+//
+//  To set the build settings up correctly for a new module target, do the following:
+//
+//    1. Create a new static library target.
+//    2. Open the Build Settings tab of the Project Editor and select the new static library target.
+//    3. Select the "Customized" option.
+//    3. Click on a row in the table of build settings, then select all build settings using Edit > Select All (⌘A).
+//    4. Delete all build setting overrides by pressing the Delete key.
+//    5. In the Project Editor, select the project itself, and then open the Info tab.
+//    6. In the Configurations area, select "ModuleOverridingBuildSettings" for your new static library target for both the Debug and Release configurations.
+//
+//  More details for creating new module targets is available in the README.
+//
+
+// Disable code signing for this target.
+CODE_SIGN_IDENTITIY =
+CODE_SIGN_STYLE = Manual
+
+// Ensure that this target supports Mac Catalyst.
+SUPPORTS_MACCATALYST = YES
+
+// Disable generation of the Objective-C compatibility header from Swift (i.e. -Swift.h.)
+SWIFT_OBJC_INTERFACE_HEADER_NAME =
+
+// Ensure that the static library is packaged correctly for use in the project.
+SKIP_INSTALL = YES
+OTHER_LD_FLAGS = -ObjC
+PRODUCT_NAME = $(TARGET_NAME)

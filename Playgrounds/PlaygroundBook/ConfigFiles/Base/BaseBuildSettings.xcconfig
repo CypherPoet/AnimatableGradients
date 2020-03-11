@@ -1,0 +1,58 @@
+//
+//  See LICENSE folder for this template’s licensing information.
+//
+//  Abstract:
+//  Provides build settings which should be used by all targets.
+//
+
+//
+//  Most of these build settings should not be edited.
+//  SUPPORTING_CONTENT_DIR may be edited if you move the SupportingContent directory out of the project directory.
+//
+
+// The path to the directory containing all of the supporting content for this project.
+// By default, the supporting content is stored in the SupportingContent directory next to the xcodeproj.
+SUPPORTING_CONTENT_DIR = $(PROJECT_DIR)/SupportingContent/
+
+// The supporting content for this project is split by platform name.
+// This value is generally the same as PLATFORM_NAME
+PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME = $(__PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_$(__PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL))
+    // Use the platform's regular name if there isn't any override.
+    __PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_ = $(PLATFORM_NAME)
+
+    // macOS and Mac Catalyst are handled specially (see below).
+    __PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_macosx = macosx
+    __PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_maccatalyst = maccatalyst
+
+    // Only set __PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL if the value needs to be customized (instead of using the default PLATFORM_NAME).
+    // If PLATFORM_NAME can be used as-is, don't set __PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL.
+    __PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL = $(__PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL_$(PLATFORM_NAME))
+        // Customize macosx based on the value of IS_MACCATALYST.
+        __PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL_macosx = $(__PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL_macosx_$(IS_MACCATALYST))
+            // If IS_MACCATALYST is YES, then use the value maccatalyst.
+            __PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL_macosx_YES = maccatalyst
+            // If IS_MACCATALYST is NO (or unset), then use the value macosx.
+            __PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL_macosx_NO = macosx
+            __PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL_macosx_ = $(__PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME_IMPL_macosx_NO)
+
+// The path to the directory containing the Swift Playgrounds frameworks (i.e. PlaygroundSupport and PlaygroundBluetooth).
+// By default, these are stored in the PlaygroundsFrameworks directory in the supporting content directory.
+PLAYGROUNDS_FRAMEWORKS_DIR = $(SUPPORTING_CONTENT_DIR)/PlaygroundsFrameworks/$(PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME)/
+
+// The path to the directory containing other supporting frameworks.
+// These are not usable in the Playground Book sources, but are usable in (and used by) LiveViewTestApp.
+// By default, these are stored in the OtherFrameworks directory in the supporting content directory.
+OTHER_FRAMEWORKS_DIR = $(SUPPORTING_CONTENT_DIR)/OtherFrameworks/$(PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME)/
+
+// Ensure we include PLAYGROUNDS_FRAMEWORKS_DIR in the system frameworks search path.
+// All targets should be able to import the Swift Playgrounds frameworks.
+SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PLAYGROUNDS_FRAMEWORKS_DIR)" $(inherited)
+
+// Since Swift Playgrounds only supports 64-bit devices, this project can only be built for 64-bit devices as well.
+ARCHS = $(ARCHS_STANDARD_64_BIT)
+
+// Since Swift Playgrounds only supports iPad, this project should only be built targeting iPad as well.
+TARGETED_DEVICE_FAMILY = 2
+
+// The supporting frameworks do not contain bitcode, so disable bitcode generation for this project.
+ENABLE_BITCODE = NO

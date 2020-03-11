@@ -1,0 +1,25 @@
+//
+//  See LICENSE folder for this template’s licensing information.
+//
+//  Abstract:
+//  A set of build settings which should be edited by the author of this project.
+//  Other build settings which need to be modified should generally be set in the Project Editor.
+//
+
+// This is the prefix for all bundle identifiers in this project, including the playground book's ContentIdentifier by default.
+// This should be updated to something specific to your team.
+BUNDLE_IDENTIFIER_PREFIX = com.example
+
+// This is the base of the file name for the playground book produced by this project (e.g. "PlaygroundBook" in "PlaygroundBook.playgroundbook").
+PLAYGROUND_BOOK_FILE_NAME = SwiftUI Animatable Gradients
+
+// This is the ContentIdentifier of the playground book.
+// This should be updated to something specific to your team and your specific content.
+PLAYGROUND_BOOK_CONTENT_IDENTIFIER = $(BUNDLE_IDENTIFIER_PREFIX).$(PLAYGROUND_BOOK_FILE_NAME:rfc1034identifier)
+
+// This is the ContentVersion of the playground book.
+PLAYGROUND_BOOK_CONTENT_VERSION = 1.0
+
+// Additionally, include some base build settings which this project requires but which shouldn't generally be edited.
+// Do *not* remove this #include; if you do, the project will fail to build.
+#include "Base/BaseBuildSettings.xcconfig"

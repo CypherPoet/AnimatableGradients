@@ -1,0 +1,6 @@
+framework module PlaygroundSupport {
+  umbrella header "PlaygroundSupport.h"
+
+  export *
+  module * { export * }
+}

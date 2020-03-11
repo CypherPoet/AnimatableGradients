@@ -1,4 +1,4 @@
-# SwiftUI AnimatableGradients (WIP)
+# SwiftUI Animatable Gradients
 
 
 <p>

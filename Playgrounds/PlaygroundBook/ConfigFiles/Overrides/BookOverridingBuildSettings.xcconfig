@@ -1,0 +1,58 @@
+//
+//  See LICENSE folder for this template’s licensing information.
+//
+//  Abstract:
+//  Provide build settings which make the PlaygroundBook "bundle" target build a .playgroundbook.
+//
+
+//
+//  The build settings in this file typically should *not* be edited or overridden in the PlaygroundBook target.
+//
+
+// Override the SHALLOW_BUNDLE build setting to NO, since the PlaygroundBook target does not produce a shallow bundle.
+SHALLOW_BUNDLE = NO
+
+// The PlaygroundBook target produces a wrapper with the extension ".playgroundbook".
+WRAPPER_EXTENSION = playgroundbook
+
+// Playground books store their contents in the Contents directory, so override the CONTENTS_FOLDER_PATH to point at that path.
+CONTENTS_FOLDER_PATH = $(WRAPPER_NAME)/Contents
+
+// Likewise, the resources for a playground book are stored in PrivateResources directory in the Contents directory.
+UNLOCALIZED_RESOURCES_FOLDER_PATH = $(CONTENTS_FOLDER_PATH)/PrivateResources
+
+// Playground books do not have an Info.plist file. (They do have a Manifest.plist file, but it's handled separately.)
+INFOPLIST_FILE =
+
+// Playground books are not code signed, so disable everything related to signing.
+CODE_SIGN_IDENTITY =
+CODE_SIGNING_ALLOWED = NO
+CODE_SIGNING_REQUIRED = NO
+CODE_SIGN_STYLE = Manual
+
+// The PlaygroundBook target requires that build rules be applied to files in Copy Files build phases, as that's how the Manifest.plist for the book is copied.
+APPLY_RULES_IN_COPY_FILES = YES
+
+// The PlaygroundBook target requires that it build resources for all target devices, not just the active target device.
+ENABLE_ONLY_ACTIVE_RESOURCES = NO
+
+// Wrap DEPLOYMENT_TARGET_SETTING_NAME in a way that allows customization for platforms which can't use the default value.
+__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_SETTING_NAME = $(__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_SETTING_NAME_$(__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_SETTING_NAME_IMPL))
+    // For platforms which don't need custom behavior, use DEPLOYMENT_TARGET_SETTING_NAME.
+    __PLAYGROUND_BOOK_DEPLOYMENT_TARGET_SETTING_NAME_ = $(DEPLOYMENT_TARGET_SETTING_NAME)
+
+    // For Mac Catalyst, use IPHONEOS_DEPLOYMENT_TARGET instead of MACOSX_DEPLOYMENT_TARGET.
+    __PLAYGROUND_BOOK_DEPLOYMENT_TARGET_SETTING_NAME_maccatalyst = IPHONEOS_DEPLOYMENT_TARGET
+
+    // __PLAYGROUND_BOOK_DEPLOYMENT_TARGET_SETTING_NAME_IMPL is set to the platform name for platforms which need custom behavior.
+    __PLAYGROUND_BOOK_DEPLOYMENT_TARGET_SETTING_NAME_IMPL = $(__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_SETTING_NAME_IMPL_$(PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME))
+        __PLAYGROUND_BOOK_DEPLOYMENT_TARGET_SETTING_NAME_IMPL_maccatalyst = maccatalyst
+
+// The value for DeploymentTarget in the playground book's Manifest.plist, derived from the current platform and the current platform's deployment target for the PlaygroundBook target in the Xcode project.
+PLAYGROUND_BOOK_DEPLOYMENT_TARGET_FOR_MANIFEST = $(__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_PLATFORM_IDENTIFIER)$($(__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_SETTING_NAME))
+
+__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_PLATFORM_IDENTIFIER = $(__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_PLATFORM_IDENTIFIER_$(PLAYGROUNDBOOKTEMPLATE_PLATFORM_NAME))
+__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_PLATFORM_IDENTIFIER_iphoneos = ios
+__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_PLATFORM_IDENTIFIER_iphonesimulator = ios
+// The playground book format treats iOS and Mac Catalyst the same, so use ios for this value.
+__PLAYGROUND_BOOK_DEPLOYMENT_TARGET_PLATFORM_IDENTIFIER_maccatalyst = ios
