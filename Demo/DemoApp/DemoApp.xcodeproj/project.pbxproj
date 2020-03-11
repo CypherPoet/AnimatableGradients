@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F39A554C241725E7002E8AD2 /* AnimatableGradient in Frameworks */ = {isa = PBXBuildFile; productRef = F39A554B241725E7002E8AD2 /* AnimatableGradient */; };
+		F39A554C241725E7002E8AD2 /* AnimatableGradients in Frameworks */ = {isa = PBXBuildFile; productRef = F39A554B241725E7002E8AD2 /* AnimatableGradients */; };
 		F39A555024174423002E8AD2 /* LinearGradientsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A554F24174423002E8AD2 /* LinearGradientsExample.swift */; };
 		F39A55542417498E002E8AD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A55532417498E002E8AD2 /* Constants.swift */; };
 		F39A55562417499C002E8AD2 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A55552417499C002E8AD2 /* Appearance.swift */; };
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F39A554C241725E7002E8AD2 /* AnimatableGradient in Frameworks */,
+				F39A554C241725E7002E8AD2 /* AnimatableGradients in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +197,7 @@
 			);
 			name = DemoApp;
 			packageProductDependencies = (
-				F39A554B241725E7002E8AD2 /* AnimatableGradient */,
+				F39A554B241725E7002E8AD2 /* AnimatableGradients */,
 			);
 			productName = DemoApp;
 			productReference = F3A7B8E02415BC6F00B560C9 /* DemoApp.app */;
@@ -461,9 +461,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F39A554B241725E7002E8AD2 /* AnimatableGradient */ = {
+		F39A554B241725E7002E8AD2 /* AnimatableGradients */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AnimatableGradient;
+			productName = AnimatableGradients;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

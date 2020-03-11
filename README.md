@@ -1,4 +1,4 @@
-# AnimatableGradient (WIP)
+# SwiftUI AnimatableGradients (WIP)
 
 
 <p>
@@ -8,8 +8,8 @@
     <a href="https://github.com/apple/swift-package-manager">
       <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" />
     </a>
-    <a href="https://github.com/CypherPoet/AnimatableGradient/actions">
-      <img src="https://github.com/CypherPoet/AnimatableGradient/workflows/Builds/badge.svg" />
+    <a href="https://github.com/CypherPoet/AnimatableGradients/actions">
+      <img src="https://github.com/CypherPoet/AnimatableGradients/workflows/Builds/badge.svg" />
     </a>
     <a href="https://twitter.com/cypher_poet">
         <img src="https://img.shields.io/badge/Contact-@cypher_poet-lightgrey.svg?style=flat" alt="Twitter: @cypher_poet" />
@@ -26,7 +26,7 @@ _A collection of SwiftUI View Modifiers for creating animated color gradients._
 
 
 - 🔗Clone or download this repo and play around with the [Demo app](./Demo/).
-- 🔗Download this [Swift Playgrounds Book]() to play around with some of the library's underlying code.
+- 🔗Download this [Swift Playgrounds Book]() to play around with some of the library's underlying code in the [Swift Playgrounds App](https://www.apple.com/swift/playgrounds/).
 
 
 ## Features
@@ -51,24 +51,24 @@ _A collection of SwiftUI View Modifiers for creating animated color gradients._
 
 ## Installation
 
-`AnimatableGradient` can be used through the Swift Package Manager. You can add it as a dependency in your `Package.swift` file:
+`AnimatableGradients` can be used through the Swift Package Manager. You can add it as a dependency in your `Package.swift` file:
 
 ```swift
 let package = Package(
     //...
     dependencies: [
-        .package(url: "https://github.com/CypherPoet/AnimatableGradient", .branch("master")),
+        .package(url: "https://github.com/CypherPoet/AnimatableGradients", .branch("master")),
     ],
     //...
 )
 ```
 
-Then simply `import AnimatableGradient` wherever you’d like to use it.
+Then simply `import AnimatableGradients` wherever you’d like to use it.
 
 
 ## Usage
 
-The view modifiers exposed by `AnimatableGradient` all conform to its `AnimatableGradientModifier` protocol. (You can view the implementation [here](https://github.com/CypherPoet/AnimatableGradient/blob/master/Sources/Protocols/AnimatableGradientModifier.swift).)
+The view modifiers exposed by `AnimatableGradients` all conform to its `AnimatableGradientModifier` protocol. (You can view the implementation [here](https://github.com/CypherPoet/AnimatableGradients/blob/master/Sources/Protocols/AnimatableGradientModifier.swift).)
 
 <details>
 <summary>AnimatableGradientModifier Protocol</summary>
@@ -92,7 +92,7 @@ protocol AnimatableGradientModifier: AnimatableModifier {
 </details>
 
 
-To use these modifiers, `AnimatableGradient` provides the following extensions on `View`s and `Shape`s:
+To use these modifiers, `AnimatableGradients` provides the following extensions on `View`s and `Shape`s:
 
 - animatableLinearGradient
 - animatableRadialGradient
@@ -420,7 +420,7 @@ Color.clear
 
 ## Contributing
 
-Contributions to `AnimatableGradient` are most welcome. Check out some of the [issue templates](./.github/ISSUE_TEMPLATE/) for more info.
+Contributions to `AnimatableGradients` are most welcome. Check out some of the [issue templates](./.github/ISSUE_TEMPLATE/) for more info.
 
 
 
@@ -433,4 +433,4 @@ Contributions to `AnimatableGradient` are most welcome. Check out some of the [i
 
 ## License
 
-AnimatableGradient is available under the MIT license. See the [LICENSE file](./LICENSE) for more info.
+AnimatableGradients is available under the MIT license. See the [LICENSE file](./LICENSE) for more info.

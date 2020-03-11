@@ -5,7 +5,7 @@ import Foundation
 import SwiftUI
 import XCTest
 
-@testable import AnimatableGradient
+@testable import AnimatableGradients
 
 
 final class ColorMixingTests: XCTestCase {

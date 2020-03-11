@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import AnimatableGradient
+import AnimatableGradients
 
 
 struct AngularGradientsExample {
