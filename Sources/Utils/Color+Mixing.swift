@@ -12,23 +12,28 @@ extension UIColor {
         between secondColor: UIColor,
         by percentage: CGFloat
     ) -> Color {
-        guard let firstComponents = self.cgColor.components else { return Color(self) }
-        guard let secondComponents = secondColor.cgColor.components else { return Color(secondColor) }
+        guard let firstCGColorComponents = self.cgColor.components else { return Color(self) }
+        guard let secondCGColorComponents = secondColor.cgColor.components else { return Color(secondColor) }
+
+        let firstComponents = rgbaComponents(from: firstCGColorComponents)
+        let secondComponents = rgbaComponents(from: secondCGColorComponents)
         
-        let firstRed = firstComponents[0]
-        let secondRed = secondComponents[0]
+        let percentage = min(max(0.0, percentage), 1.0)
+
+        let firstRed = firstComponents.red
+        let secondRed = secondComponents.red
         let redDiff: CGFloat = secondRed - firstRed
         let interpolatedRed = firstRed + (redDiff * percentage)
 
         
-        let firstGreen = firstComponents[1]
-        let secondGreen = secondComponents[1]
+        let firstGreen = firstComponents.green
+        let secondGreen = secondComponents.green
         let greenDiff: CGFloat = secondGreen - firstGreen
         let interpolatedGreen = firstGreen + (greenDiff * percentage)
         
         
-        let firstBlue = firstComponents[2]
-        let secondBlue = secondComponents[2]
+        let firstBlue = firstComponents.blue
+        let secondBlue = secondComponents.blue
         let blueDiff: CGFloat = secondBlue - firstBlue
         let interpolatedBlue = firstBlue + (blueDiff * percentage)
         
@@ -40,5 +45,26 @@ extension UIColor {
         )
     }
 }
+
+
+/// Generates RGBA color component values from an array of
+/// `CGColor.components` values.
+///
+/// This helps account for cases where "Black" and "White" `CGColor`s only have
+/// two `component`s (the second value being their `alpha`), while other `CGColor`s
+/// have four (representing RGBA).
+func rgbaComponents(from cgColorComponents: [CGFloat]) -> (
+    red: CGFloat,
+    green: CGFloat,
+    blue: CGFloat,
+    alpha: CGFloat
+) {
+    guard cgColorComponents.count == 4 else {
+        return (cgColorComponents[0], cgColorComponents[0], cgColorComponents[0], cgColorComponents[1])
+    }
+    
+    return (cgColorComponents[0], cgColorComponents[1], cgColorComponents[2], cgColorComponents[3])
+}
+
 
 #endif
