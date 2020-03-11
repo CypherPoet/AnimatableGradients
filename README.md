@@ -132,7 +132,7 @@ struct ContentView {
             .animatableLinearGradient(
                 startColors: [.red, .blue],
                 endColors: [.green, .yellow],
-                completionPercentage: self.animationCompletion
+                completionPercentage: animationCompletion
             )
             .onAppear {
                 withAnimation(
