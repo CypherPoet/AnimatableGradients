@@ -26,7 +26,7 @@ _A collection of SwiftUI View Modifiers for creating animated color gradients._
 
 
 - 🔗Clone or download this repo and play around with the [Demo app](./Demo/).
-- 🔗[Swift Playgrounds Book]().
+- 🔗Download this [Swift Playgrounds Book]() to play around with some of the library's underlying code.
 
 
 ## Features
@@ -178,7 +178,7 @@ RoundedRectangle(cornerRadius: 24)
         completionPercentage: animationCompletion
     )
 ```
-<div align="center">How to use it 👆</div>
+<div align="center">How you might use it 👆</div>
 <br />
 
 
@@ -213,7 +213,7 @@ Color.clear
             completionPercentage: animationCompletion
     )
 ```
-<div align="center">How to use it 👆</div>
+<div align="center">How you might use it 👆</div>
 <br />
 
 
@@ -256,7 +256,7 @@ RoundedRectangle(cornerRadius: 24)
         completionPercentage: animationCompletion
     )
 ```
-<div align="center">How to use it 👆</div>
+<div align="center">How you might use it 👆</div>
 </br>
 
 
@@ -291,7 +291,7 @@ Color.clear
         completionPercentage: animationCompletion
     )
 ```
-<div align="center">How to use it 👆</div>
+<div align="center">How you might use it 👆</div>
 </br>
 
 
@@ -348,7 +348,7 @@ RoundedRectangle(cornerRadius: 24)
         completionPercentage: animationCompletion
     )
 ```
-<div align="center">How to use it 👆</div>
+<div align="center">How you might use it 👆</div>
 </br>
 
 
@@ -398,7 +398,7 @@ Color.clear
         completionPercentage: animationCompletion
     )
 ```
-<div align="center">How to use it 👆</div>
+<div align="center">How you might use it 👆</div>
 </br>
 
 
