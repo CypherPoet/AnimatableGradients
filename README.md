@@ -26,7 +26,7 @@ _A collection of SwiftUI View Modifiers for creating animated color gradients._
 
 
 - 🔗Clone or download this repo and play around with the [Demo app](./Demo/).
-- 🔗Download this [Swift Playgrounds Book]() to play around with some of the library's underlying code in the [Swift Playgrounds App](https://www.apple.com/swift/playgrounds/).
+<!-- - 🔗Download this [Swift Playgrounds Book]() to play around with some of the library's underlying code in the [Swift Playgrounds App](https://www.apple.com/swift/playgrounds/). -->
 
 
 ## Features
@@ -428,6 +428,7 @@ Contributions to `AnimatableGradients` are most welcome. Check out some of the [
 
 - Mac Catalyst Support (?)
 - watchOS Support (?)
+- Playground Book
 
 
 
