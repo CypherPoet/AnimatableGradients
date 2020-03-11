@@ -43,8 +43,14 @@ extension RootView: View {
                         Text("Radial Gradients")
                     }
                     
-                    NavigationLink(destination: ViewsExample()) {
+                    NavigationLink(destination: AngularGradientsExample()) {
                         Text("Angular Gradients")
+                    }
+                }
+                
+                Section(header: Text("Scratchpad")) {
+                    NavigationLink(destination: ScratchPad1View()) {
+                        Text("ScratchPad 1")
                     }
                 }
             }

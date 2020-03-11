@@ -1,4 +1,4 @@
-# AnimatableGradient
+# AnimatableGradient (WIP)
 
 
 <p>
@@ -17,13 +17,16 @@
 </p>
 
 
-_A SwiftUI View Modifier for creating gradients with animated colors_.
+_A collection of SwiftUI View Modifiers for creating animated color gradients._
 
 
-<div>
-  <img src="./Assets/Screenshots/linear-gradient-recording-1.gif" width="400px">
+<div align="center">
+  <img src="./Assets/Screenshots/linear-gradient-recording-2.gif" width="400px">
 </div>
 
+
+- 🔗Clone or download this repo and play around with the [Demo app](./Demo/).
+- 🔗[Swift Playgrounds Book]().
 
 
 ## Features
@@ -40,6 +43,7 @@ _A SwiftUI View Modifier for creating gradients with animated colors_.
 ## Requirements
 
 - iOS 13.0+
+- iPadOS 13.0+
 - tvOS 13.0+
 - Xcode 11.3+ (for developing)
 
@@ -64,7 +68,7 @@ Then simply `import AnimatableGradient` wherever you’d like to use it.
 
 ## Usage
 
-The view modifiers exposed by `AnimatableGradient` all conform to its `AnimatableGradientModifier` protocol.
+The view modifiers exposed by `AnimatableGradient` all conform to its `AnimatableGradientModifier` protocol. (You can view the implementation [here](https://github.com/CypherPoet/AnimatableGradient/blob/master/Sources/Protocols/AnimatableGradientModifier.swift).)
 
 <details>
 <summary>AnimatableGradientModifier Protocol</summary>
@@ -104,6 +108,7 @@ To use these modifiers, `AnimatableGradient` provides the following extensions o
 
 > This is the "animation completion" percentage that each `AnimatableGradientModifier` will use to generate interpolated color values during each rendered frame.
 
+
 Additionally, the same containing views will need to animate the change of the animation completion. A common pattern consists of animating the value repeatedly from the containing view's `onAppear` modifier to create a continuous animation effect:
 
 ```swift
@@ -116,7 +121,7 @@ Additionally, the same containing views will need to animate the change of the a
 }
 ```
 
-Taken together, a minimal, complete example would look like this:
+Taken together, a minimal, complete example could look like this:
 
 ```swift
 
@@ -138,6 +143,7 @@ struct ContentView {
                 }
             }
     }
+}
 
 ```
 
@@ -149,6 +155,23 @@ But now for some more detail...
 #### Usage on Shapes
 
 ```swift
+extension Shape {
+
+    public func animatableLinearGradient (
+        startColors: [UIColor],
+        endColors: [UIColor],
+        startPoint: UnitPoint = .topLeading,
+        endPoint: UnitPoint = .bottomTrailing,
+        completionPercentage: CGFloat
+    ) -> some View {
+      ...
+    }
+}
+```
+<div align="center">What you're using 👆</div>
+
+
+```swift
   RoundedRectangle(cornerRadius: 24)
       .animatableLinearGradient(
           startColors: [.red, .blue, .purple, .white],
@@ -156,6 +179,16 @@ But now for some more detail...
           completionPercentage: self.animationCompletion
       )
 ```
+<div align="center">How to use it 👆</div>
+
+
+
+<div align="center">
+  <img src="" width="400px">
+</div>
+
+
+
 
 #### Usage on Views
 
@@ -173,16 +206,23 @@ But now for some more detail...
 #### Usage on Views
 
 
+### ⚠️ Edge Cases
+
+- If you pass a `completionPercentage` value less than 0, or greater than 1, it will automatically be clamped to the closer endpoint.
+- Behind the scenes, the `startColors` and `endColors` arrays get zipped before the interpolated colors are computed. This means that if their sizes are different, the larger array will be trimmed down to the size of the smaller array, and the excess colors in the larger array won't be used.
+  - As such, if either or both of the `startColors` and `endColors` arrays are empty, the gradient will have no colors passed to it and it will appear completely clear.
+
 
 ## Contributing
 
-Contributions to `MyLibrary` are most welcome. Check out some of the [issue templates](./.github/ISSUE_TEMPLATE/) for more info.
+Contributions to `AnimatableGradient` are most welcome. Check out some of the [issue templates](./.github/ISSUE_TEMPLATE/) for more info.
 
 
 
 ## Roadmap
 
-- Mac Catalyst Support ?
+- Mac Catalyst Support (?)
+- watchOS Support (?)
 
 
 

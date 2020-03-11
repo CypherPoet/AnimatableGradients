@@ -12,6 +12,7 @@
 		F39A55542417498E002E8AD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A55532417498E002E8AD2 /* Constants.swift */; };
 		F39A55562417499C002E8AD2 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A55552417499C002E8AD2 /* Appearance.swift */; };
 		F39A555824177CC6002E8AD2 /* AngularGradientsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A555724177CC6002E8AD2 /* AngularGradientsExample.swift */; };
+		F39A555D24187A05002E8AD2 /* ScratchPad1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A555C24187A05002E8AD2 /* ScratchPad1View.swift */; };
 		F3A7B8E42415BC6F00B560C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B8E32415BC6F00B560C9 /* AppDelegate.swift */; };
 		F3A7B8E62415BC6F00B560C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B8E52415BC6F00B560C9 /* SceneDelegate.swift */; };
 		F3A7B8EA2415BC7000B560C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A7B8E92415BC7000B560C9 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		F39A555724177CC6002E8AD2 /* AngularGradientsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngularGradientsExample.swift; sourceTree = "<group>"; };
 		F39A55592417B619002E8AD2 /* SwiftUIAnimatableGradient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIAnimatableGradient; path = ../..; sourceTree = "<group>"; };
 		F39A555A2417B62C002E8AD2 /* SwiftUIAnimatableGradient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIAnimatableGradient; path = ../..; sourceTree = "<group>"; };
+		F39A555C24187A05002E8AD2 /* ScratchPad1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchPad1View.swift; sourceTree = "<group>"; };
 		F3A7B8E02415BC6F00B560C9 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A7B8E32415BC6F00B560C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A7B8E52415BC6F00B560C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		F39A555B241879E5002E8AD2 /* ScratchPad */ = {
+			isa = PBXGroup;
+			children = (
+				F39A555C24187A05002E8AD2 /* ScratchPad1View.swift */,
+			);
+			path = ScratchPad;
+			sourceTree = "<group>";
+		};
 		F3A7B8D72415BC6F00B560C9 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				F3A7B8FE2415BE0D00B560C9 /* RootView.swift */,
+				F39A555B241879E5002E8AD2 /* ScratchPad */,
 				F39A554E241735A5002E8AD2 /* Gradient Varieties */,
 				F39A554D24173527002E8AD2 /* Basics */,
 			);
@@ -250,6 +261,7 @@
 				F3A7B9012415BE6D00B560C9 /* ShapesExample.swift in Sources */,
 				F39A555024174423002E8AD2 /* LinearGradientsExample.swift in Sources */,
 				F39A55542417498E002E8AD2 /* Constants.swift in Sources */,
+				F39A555D24187A05002E8AD2 /* ScratchPad1View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
