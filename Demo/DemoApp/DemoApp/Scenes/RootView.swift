@@ -48,9 +48,12 @@ extension RootView: View {
                     }
                 }
                 
-                Section(header: Text("Scratchpad")) {
+                Section(header: Text("Scratchpads")) {
                     NavigationLink(destination: ScratchPad1View()) {
                         Text("ScratchPad 1")
+                    }
+                    NavigationLink(destination: ScratchPad2View()) {
+                        Text("ScratchPad 2")
                     }
                 }
             }
