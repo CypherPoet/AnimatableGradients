@@ -34,8 +34,8 @@ _A collection of SwiftUI View Modifiers for creating animated color gradients._
 - [x] Linear Gradients
 - [x] Radial Gradients
 - [x] Angular Gradients
-- [x] Direct ViewModifier Usage on Shapes
-- [x] Direct ViewModifier Usage on Views -- when a custom Shape is defined.
+- [x] Direct `ViewModifier` Usage on `Shape`s
+- [x] Direct `ViewModifier` Usage on `View`s -- when a custom `Shape` is defined.
 - [x] Interpolate between as many start and end colors as you want.
 
 
@@ -121,10 +121,9 @@ Additionally, the same containing views will need to animate the change of the a
 }
 ```
 
-Taken together, a minimal, complete example could look like this:
+Taken together, a minimal functional example could look like this:
 
 ```swift
-
 struct ContentView {
     @State private var animationCompletion: CGFloat = 0.0
 
@@ -144,7 +143,6 @@ struct ContentView {
             }
     }
 }
-
 ```
 
 But now for some more detail...
@@ -169,41 +167,248 @@ extension Shape {
 }
 ```
 <div align="center">What you're using 👆</div>
+</br>
 
 
 ```swift
-  RoundedRectangle(cornerRadius: 24)
-      .animatableLinearGradient(
-          startColors: [.red, .blue, .purple, .white],
-          endColors: [.green, .yellow, .orange, .black],
-          completionPercentage: self.animationCompletion
-      )
+RoundedRectangle(cornerRadius: 24)
+    .animatableLinearGradient(
+        startColors: [.systemPurple, .systemBlue, .systemGreen, .white],
+        endColors: [.systemGray, .systemPink, .systemOrange, .systemRed],
+        completionPercentage: animationCompletion
+    )
 ```
 <div align="center">How to use it 👆</div>
-
-
-
-<div align="center">
-  <img src="" width="400px">
-</div>
-
+<br />
 
 
 
 #### Usage on Views
+
+```swift
+extension View {
+
+    public func animatableLinearGradient<BaseShape: Shape>(
+        baseShape: BaseShape,
+        startColors: [UIColor],
+        endColors: [UIColor],
+        startPoint: UnitPoint = .topLeading,
+        endPoint: UnitPoint = .bottomTrailing,
+        completionPercentage: CGFloat
+    ) -> some View {
+      ...
+    }
+}
+```
+<div align="center">What you're using 👆</div>
+</br>
+
+
+```swift
+Color.clear
+    .animatableLinearGradient(
+            baseShape: RoundedRectangle(cornerRadius: 24),
+            startColors: [.systemPurple, .systemBlue, .systemGreen, .white],
+            endColors: [.systemGray, .systemPink, .systemOrange, .systemRed],
+            completionPercentage: animationCompletion
+    )
+```
+<div align="center">How to use it 👆</div>
+<br />
+
+
+#### 📸 Example
+
+<div align="center">
+  <img src="./Assets/Screenshots/linear-gradient-example-recording-1.gif" width="400px">
+</div>
 
 
 
 ### Animatable Radial Gradients
 
 #### Usage on Shapes
+
+```swift
+extension Shape {
+
+   public func animatableRadialGradient (
+        startColors: [UIColor],
+        endColors: [UIColor],
+        centerPoint: UnitPoint = .center,
+        startRadius: CGFloat? = nil,
+        endRadius: CGFloat? = nil,
+        completionPercentage: CGFloat
+    ) -> some View {
+        ...
+    }
+}
+```
+<div align="center">What you're using 👆</div>
+</br>
+
+
+```swift
+RoundedRectangle(cornerRadius: 24)
+    .animatableRadialGradient(
+        startColors: [.systemPurple, .systemBlue, .systemGreen, .white],
+        endColors: [.systemGray, .systemPink, .systemOrange, .black],
+        completionPercentage: animationCompletion
+    )
+```
+<div align="center">How to use it 👆</div>
+</br>
+
+
 #### Usage on Views
+
+```swift
+extension View {
+
+    public func animatableRadialGradient<BaseShape: Shape>(
+        baseShape: BaseShape,
+        startColors: [UIColor],
+        endColors: [UIColor],
+        centerPoint: UnitPoint = .center,
+        startRadius: CGFloat? = nil,
+        endRadius: CGFloat? = nil,
+        completionPercentage: CGFloat
+    ) -> some View {
+        ...
+    }
+}
+```
+<div align="center">What you're using 👆</div>
+</br>
+
+
+```swift
+Color.clear
+    .animatableRadialGradient(
+        baseShape: RoundedRectangle(cornerRadius: 24),
+        startColors: [.systemPurple, .systemBlue, .systemGreen, .white],
+        endColors: [.systemGray, .systemPink, .systemOrange, .black],
+        completionPercentage: animationCompletion
+    )
+```
+<div align="center">How to use it 👆</div>
+</br>
+
+
+#### 📸 Example
+
+<div align="center">
+  <img src="./Assets/Screenshots/radial-gradient-example-recording-1.gif" width="400px">
+</div>
+
 
 
 ### Animatable Angular Gradients
 
 #### Usage on Shapes
+
+```swift
+extension Shape {
+
+    /// - Parameters:
+    ///   - fullSpanStartAngle: Setting this property will cause the gradient to being at
+    ///         the specified offset, and then span the entire circumference. (Default: `nil`)
+    public func animatableAngularGradient (
+        startColors: [UIColor],
+        endColors: [UIColor],
+        centerPoint: UnitPoint = .center,
+        fullSpanStartAngle: Angle,
+        completionPercentage: CGFloat
+    ) -> some View {
+        ...
+    }
+
+
+    public func animatableAngularGradient (
+        startColors: [UIColor],
+        endColors: [UIColor],
+        centerPoint: UnitPoint = .center,
+        startAngle: Angle = .zero,
+        endAngle: Angle = .radians(2 * .pi),
+        completionPercentage: CGFloat
+    ) -> some View {
+        ...
+    }
+}
+```
+<div align="center">What you're using 👆</div>
+</br>
+
+
+```swift
+RoundedRectangle(cornerRadius: 24)
+    .animatableAngularGradient(
+        startColors: [.systemPurple, .systemBlue, .systemGreen, .white],
+        endColors: [.systemGray, .systemPink, .systemOrange, .systemRed],
+        completionPercentage: animationCompletion
+    )
+```
+<div align="center">How to use it 👆</div>
+</br>
+
+
 #### Usage on Views
+
+```swift
+extension View {
+
+    /// - Parameters:
+    ///   - fullSpanStartAngle: Setting this property will cause the gradient to being at
+    ///         the specified offset, and then span the entire circumference. (Default: `nil`)
+    public func animatableAngularGradient<BaseShape: Shape>(
+        baseShape: BaseShape,
+        startColors: [UIColor],
+        endColors: [UIColor],
+        centerPoint: UnitPoint = .center,
+        fullSpanStartAngle: Angle,
+        completionPercentage: CGFloat
+    ) -> some View {
+        ...
+    }
+
+
+    public func animatableAngularGradient<BaseShape: Shape>(
+        baseShape: BaseShape,
+        startColors: [UIColor],
+        endColors: [UIColor],
+        centerPoint: UnitPoint = .center,
+        startAngle: Angle = .zero,
+        endAngle: Angle = .radians(2 * .pi),
+        completionPercentage: CGFloat
+    ) -> some View {
+        ...
+    }
+}
+```
+<div align="center">What you're using 👆</div>
+</br>
+
+
+```swift
+Color.clear
+    .animatableAngularGradient(
+        baseShape: RoundedRectangle(cornerRadius: 24),
+        startColors: [.systemPurple, .systemBlue, .systemGreen, .white],
+        endColors: [.systemGray, .systemPink, .systemOrange, .systemRed],
+        completionPercentage: animationCompletion
+    )
+```
+<div align="center">How to use it 👆</div>
+</br>
+
+
+#### 📸 Example
+
+<div align="center">
+  <img src="./Assets/Screenshots/angular-gradient-example-recording-1.gif" width="400px">
+</div>
+
+
 
 
 ### ⚠️ Edge Cases

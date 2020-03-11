@@ -43,15 +43,15 @@ extension AnimatableGradientModifier {
 // MARK: - Computeds
 extension AnimatableGradientModifier {
     
+    var gradient: Gradient {
+        Gradient(colors: self.gradientColors)
+    }
+    
+    
     var gradientColors: [Color] {
         zip(startColors, endColors).map { (startColor, endColor) in
             startColor.interpolate(between: endColor, by: completionPercentage)
         }
-    }
-    
-    
-    var gradient: Gradient {
-        Gradient(colors: self.gradientColors)
     }
 }
 
