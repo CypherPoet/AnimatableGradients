@@ -24,8 +24,8 @@ extension ScratchPad1View: View {
         VStack {
             RoundedRectangle(cornerRadius: 24)
                 .animatableAngularGradient(
-                    startColors: Constants.Appearance.gradientStartColors,
-                    endColors: Constants.Appearance.gradientEndColors,
+                    startColors: [.systemOrange],
+                    endColors: [.systemBlue],
                     completionPercentage: animationCompletion
                 )
                 .shadow(color: shadowColor, radius: 10, x: 3, y: 3)

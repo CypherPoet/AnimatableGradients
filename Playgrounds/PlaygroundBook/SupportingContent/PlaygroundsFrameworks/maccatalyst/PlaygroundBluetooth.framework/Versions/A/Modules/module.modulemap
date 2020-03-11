@@ -1,6 +1,0 @@
-framework module PlaygroundBluetooth {
-  umbrella header "PlaygroundBluetooth.h"
-
-  export *
-  module * { export * }
-}
