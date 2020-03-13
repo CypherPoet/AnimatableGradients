@@ -19,7 +19,11 @@
 </p>
 
 
+<p align="center">
+
 _A collection of SwiftUI View Modifiers for creating animated color gradients._
+
+</p>
 
 
 <div align="center">
