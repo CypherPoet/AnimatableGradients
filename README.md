@@ -1,19 +1,19 @@
 # SwiftUI Animatable Gradients
 
 
-<p>
-    <img src="https://img.shields.io/badge/Swift-5.1-F06C33.svg" />
-    <img src="https://img.shields.io/badge/iOS-13.0+-865EFC.svg" />
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
-    <a href="https://github.com/apple/swift-package-manager">
-      <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" />
-    </a>
-    <a href="https://github.com/CypherPoet/AnimatableGradients/actions">
-      <img src="https://github.com/CypherPoet/AnimatableGradients/workflows/Builds/badge.svg" />
-    </a>
-    <a href="https://twitter.com/cypher_poet">
-        <img src="https://img.shields.io/badge/Contact-@cypher_poet-lightgrey.svg?style=flat" alt="Twitter: @cypher_poet" />
-    </a>
+<p align="center">
+  <img src="https://img.shields.io/badge/Swift-5.1-F06C33.svg" />
+  <img src="https://img.shields.io/badge/iOS-13.0+-865EFC.svg" />
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
+  <a href="https://github.com/apple/swift-package-manager">
+    <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" />
+  </a>
+  <a href="https://github.com/CypherPoet/AnimatableGradients/actions?query=workflow%3ACI">
+      <img src="https://github.com/CypherPoet/AnimatableGradients/workflows/Swift-Build/badge.svg" alt="CI Status">
+  </a>
+  <a href="https://twitter.com/cypher_poet">
+    <img src="https://img.shields.io/badge/Contact-@cypher_poet-lightgrey.svg?style=flat" alt="Twitter: @cypher_poet" />
+  </a>
 </p>
 
 
@@ -26,7 +26,10 @@ _A collection of SwiftUI View Modifiers for creating animated color gradients._
 
 
 - 🔗Clone or download this repo and play around with the [Demo app](./Demo/).
-<!-- - 🔗Download this [Swift Playgrounds Book]() to play around with some of the library's underlying code in the [Swift Playgrounds App](https://www.apple.com/swift/playgrounds/). -->
+
+<!--
+- 🔗Download this [Swift Playgrounds Book]() to play around with some of the library's underlying code in the [Swift Playgrounds App](https://www.apple.com/swift/playgrounds/).
+-->
 
 
 ## Features

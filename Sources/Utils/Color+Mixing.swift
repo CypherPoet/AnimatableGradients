@@ -53,7 +53,7 @@ extension UIColor {
 /// This helps account for cases where "Black" and "White" `CGColor`s only have
 /// two `component`s (the second value being their `alpha`), while other `CGColor`s
 /// have four (representing RGBA).
-func rgbaComponents(from cgColorComponents: [CGFloat]) -> (
+private func rgbaComponents(from cgColorComponents: [CGFloat]) -> (
     red: CGFloat,
     green: CGFloat,
     blue: CGFloat,

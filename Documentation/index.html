@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (0% documented)</p>
+        <p class="header-right"><a href="https://github.com/CypherPoet/AnimatableGradients"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Shape.html">Shape</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AnimatableGradientModifier.html">AnimatableGradientModifier</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/AnimatableAngularGradientModifier.html">AnimatableAngularGradientModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AnimatableLinearGradientModifier.html">AnimatableLinearGradientModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AnimatableRadialGradientModifier.html">AnimatableRadialGradientModifier</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='swiftui-animatable-gradients' class='heading'>SwiftUI Animatable Gradients</h1>
+
+<p>
+    <img src="https://img.shields.io/badge/Swift-5.1-F06C33.svg" />
+    <img src="https://img.shields.io/badge/iOS-13.0+-865EFC.svg" />
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
+    <a href="https://github.com/apple/swift-package-manager">
+      <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" />
+    </a>
+    <a href="https://github.com/CypherPoet/AnimatableGradients/actions">
+      <img src="https://github.com/CypherPoet/AnimatableGradients/workflows/Builds/badge.svg" />
+    </a>
+    <a href="https://twitter.com/cypher_poet">
+        <img src="https://img.shields.io/badge/Contact-@cypher_poet-lightgrey.svg?style=flat" alt="Twitter: @cypher_poet" />
+    </a>
+</p>
+
+<p><em>A collection of SwiftUI View Modifiers for creating animated color gradients.</em></p>
+
+<div align="center">
+  <img src="./Assets/Screenshots/linear-gradient-recording-2.gif" width="400px">
+</div>
+
+<ul>
+<li>🔗Clone or download this repo and play around with the <a href="./Demo/">Demo app</a>.</li>
+</ul>
+
+<!--
+- 🔗Download this [Swift Playgrounds Book]() to play around with some of the library's underlying code in the [Swift Playgrounds App](https://www.apple.com/swift/playgrounds/).
+-->
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>[x] Linear Gradients</li>
+<li>[x] Radial Gradients</li>
+<li>[x] Angular Gradients</li>
+<li>[x] Direct <code>ViewModifier</code> Usage on <code>Shape</code>s</li>
+<li>[x] Direct <code>ViewModifier</code> Usage on <code>View</code>s &ndash; when a custom <code>Shape</code> is defined.</li>
+<li>[x] Interpolate between as many start and end colors as you want.</li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 13.0+</li>
+<li>iPadOS 13.0+</li>
+<li>tvOS 13.0+</li>
+<li>Xcode 11.3+ (for developing)</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p><code>AnimatableGradients</code> can be used through the Swift Package Manager. You can add it as a dependency in your <code>Package.swift</code> file:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="c1">//...</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/CypherPoet/AnimatableGradients"</span><span class="p">,</span> <span class="o">.</span><span class="nf">branch</span><span class="p">(</span><span class="s">"master"</span><span class="p">)),</span>
+    <span class="p">],</span>
+    <span class="c1">//...</span>
+<span class="p">)</span>
+</code></pre>
+
+<p>Then simply <code>import AnimatableGradients</code> wherever you’d like to use it.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>The view modifiers exposed by <code>AnimatableGradients</code> all conform to its <code><a href="Protocols/AnimatableGradientModifier.html">AnimatableGradientModifier</a></code> protocol. (You can view the implementation <a href="https://github.com/CypherPoet/AnimatableGradients/blob/master/Sources/Protocols/AnimatableGradientModifier.swift">here</a>.)</p>
+
+<details>
+<summary>AnimatableGradientModifier Protocol</summary>
+
+&ldquo;`swift
+protocol AnimatableGradientModifier: AnimatableModifier {
+    associatedtype BaseShape: Shape
+    associatedtype GradientShapeStyle: ShapeStyle
+
+    var baseShape: BaseShape { get }
+    var startColors: [UIColor] { get }
+    var endColors: [UIColor] { get }
+
+    var completionPercentage: CGFloat { get set }
+
+    func gradientFill(in geometry: GeometryProxy) -> GradientShapeStyle
+}
+
+&rdquo;`
+
+</details>
+
+<p>To use these modifiers, <code>AnimatableGradients</code> provides the following extensions on <code>View</code>s and <code>Shape</code>s:</p>
+
+<ul>
+<li>animatableLinearGradient</li>
+<li>animatableRadialGradient</li>
+<li>animatableAngularGradient</li>
+</ul>
+
+<p>(More detailed explanations of each can be found below.)</p>
+
+<p>🔑 In order to achieve animation, your containing views will need to provide the aforementioned modifiers with a bound <code>CGFloat</code> state value that ranges between 0.0 and 1.0.</p>
+<pre class="highlight swift"><code><span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">animationCompletion</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">0.0</span>
+</code></pre>
+
+<blockquote>
+<p>This is the &ldquo;animation completion&rdquo; percentage that each <code><a href="Protocols/AnimatableGradientModifier.html">AnimatableGradientModifier</a></code> will use to generate interpolated color values during each rendered frame.</p>
+</blockquote>
+
+<p>Additionally, the same containing views will need to animate the change of the animation completion. A common pattern consists of animating the value repeatedly from the containing view&rsquo;s <code>onAppear</code> modifier to create a continuous animation effect:</p>
+<pre class="highlight swift"><code><span class="o">.</span><span class="n">onAppear</span> <span class="p">{</span>
+    <span class="nf">withAnimation</span><span class="p">(</span>
+        <span class="kt">Animation</span><span class="o">.</span><span class="nf">easeInOut</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="nf">repeatForever</span><span class="p">(</span><span class="nv">autoreverses</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">animationCompletion</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Taken together, a minimal functional example could look like this:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">ContentView</span> <span class="p">{</span>
+    <span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">animationCompletion</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">RoundedRectangle</span><span class="p">(</span><span class="nv">cornerRadius</span><span class="p">:</span> <span class="mi">24</span><span class="p">)</span>
+            <span class="o">.</span><span class="nf">animatableLinearGradient</span><span class="p">(</span>
+                <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="o">.</span><span class="n">blue</span><span class="p">],</span>
+                <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">green</span><span class="p">,</span> <span class="o">.</span><span class="n">yellow</span><span class="p">],</span>
+                <span class="nv">completionPercentage</span><span class="p">:</span> <span class="n">animationCompletion</span>
+            <span class="p">)</span>
+            <span class="o">.</span><span class="n">onAppear</span> <span class="p">{</span>
+                <span class="nf">withAnimation</span><span class="p">(</span>
+                    <span class="kt">Animation</span><span class="o">.</span><span class="nf">easeInOut</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="nf">repeatForever</span><span class="p">(</span><span class="nv">autoreverses</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+                <span class="p">)</span> <span class="p">{</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">animationCompletion</span> <span class="o">=</span> <span class="mf">1.0</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>But now for some more detail&hellip;</p>
+<h3 id='animatable-linear-gradients' class='heading'>Animatable Linear Gradients</h3>
+<h4 id='usage-on-shapes' class='heading'>Usage on Shapes</h4>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Shape</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">animatableLinearGradient</span> <span class="p">(</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">startPoint</span><span class="p">:</span> <span class="kt">UnitPoint</span> <span class="o">=</span> <span class="o">.</span><span class="n">topLeading</span><span class="p">,</span>
+        <span class="nv">endPoint</span><span class="p">:</span> <span class="kt">UnitPoint</span> <span class="o">=</span> <span class="o">.</span><span class="n">bottomTrailing</span><span class="p">,</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="kt">CGFloat</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+      <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<div align="center">What you&rsquo;re using 👆</div>
+
+<p></br></p>
+<pre class="highlight swift"><code><span class="kt">RoundedRectangle</span><span class="p">(</span><span class="nv">cornerRadius</span><span class="p">:</span> <span class="mi">24</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">animatableLinearGradient</span><span class="p">(</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemPurple</span><span class="p">,</span> <span class="o">.</span><span class="n">systemBlue</span><span class="p">,</span> <span class="o">.</span><span class="n">systemGreen</span><span class="p">,</span> <span class="o">.</span><span class="n">white</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemGray</span><span class="p">,</span> <span class="o">.</span><span class="n">systemPink</span><span class="p">,</span> <span class="o">.</span><span class="n">systemOrange</span><span class="p">,</span> <span class="o">.</span><span class="n">systemRed</span><span class="p">],</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="n">animationCompletion</span>
+    <span class="p">)</span>
+</code></pre>
+
+<div align="center">How you might use it 👆</div>
+
+<p><br /></p>
+<h4 id='usage-on-views' class='heading'>Usage on Views</h4>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">func</span> <span class="n">animatableLinearGradient</span><span class="o">&lt;</span><span class="kt">BaseShape</span><span class="p">:</span> <span class="kt">Shape</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="nv">baseShape</span><span class="p">:</span> <span class="kt">BaseShape</span><span class="p">,</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">startPoint</span><span class="p">:</span> <span class="kt">UnitPoint</span> <span class="o">=</span> <span class="o">.</span><span class="n">topLeading</span><span class="p">,</span>
+        <span class="nv">endPoint</span><span class="p">:</span> <span class="kt">UnitPoint</span> <span class="o">=</span> <span class="o">.</span><span class="n">bottomTrailing</span><span class="p">,</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="kt">CGFloat</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+      <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<div align="center">What you&rsquo;re using 👆</div>
+
+<p></br></p>
+<pre class="highlight swift"><code><span class="kt">Color</span><span class="o">.</span><span class="n">clear</span>
+    <span class="o">.</span><span class="nf">animatableLinearGradient</span><span class="p">(</span>
+            <span class="nv">baseShape</span><span class="p">:</span> <span class="kt">RoundedRectangle</span><span class="p">(</span><span class="nv">cornerRadius</span><span class="p">:</span> <span class="mi">24</span><span class="p">),</span>
+            <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemPurple</span><span class="p">,</span> <span class="o">.</span><span class="n">systemBlue</span><span class="p">,</span> <span class="o">.</span><span class="n">systemGreen</span><span class="p">,</span> <span class="o">.</span><span class="n">white</span><span class="p">],</span>
+            <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemGray</span><span class="p">,</span> <span class="o">.</span><span class="n">systemPink</span><span class="p">,</span> <span class="o">.</span><span class="n">systemOrange</span><span class="p">,</span> <span class="o">.</span><span class="n">systemRed</span><span class="p">],</span>
+            <span class="nv">completionPercentage</span><span class="p">:</span> <span class="n">animationCompletion</span>
+    <span class="p">)</span>
+</code></pre>
+
+<div align="center">How you might use it 👆</div>
+
+<p><br /></p>
+<h4 id='example' class='heading'>📸 Example</h4>
+
+<div align="center">
+  <img src="./Assets/Screenshots/linear-gradient-example-recording-1.gif" width="400px">
+</div>
+<h3 id='animatable-radial-gradients' class='heading'>Animatable Radial Gradients</h3>
+<h4 id='usage-on-shapes' class='heading'>Usage on Shapes</h4>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Shape</span> <span class="p">{</span>
+
+   <span class="kd">public</span> <span class="kd">func</span> <span class="nf">animatableRadialGradient</span> <span class="p">(</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">centerPoint</span><span class="p">:</span> <span class="kt">UnitPoint</span> <span class="o">=</span> <span class="o">.</span><span class="n">center</span><span class="p">,</span>
+        <span class="nv">startRadius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">endRadius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="kt">CGFloat</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<div align="center">What you&rsquo;re using 👆</div>
+
+<p></br></p>
+<pre class="highlight swift"><code><span class="kt">RoundedRectangle</span><span class="p">(</span><span class="nv">cornerRadius</span><span class="p">:</span> <span class="mi">24</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">animatableRadialGradient</span><span class="p">(</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemPurple</span><span class="p">,</span> <span class="o">.</span><span class="n">systemBlue</span><span class="p">,</span> <span class="o">.</span><span class="n">systemGreen</span><span class="p">,</span> <span class="o">.</span><span class="n">white</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemGray</span><span class="p">,</span> <span class="o">.</span><span class="n">systemPink</span><span class="p">,</span> <span class="o">.</span><span class="n">systemOrange</span><span class="p">,</span> <span class="o">.</span><span class="n">black</span><span class="p">],</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="n">animationCompletion</span>
+    <span class="p">)</span>
+</code></pre>
+
+<div align="center">How you might use it 👆</div>
+
+<p></br></p>
+<h4 id='usage-on-views' class='heading'>Usage on Views</h4>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">func</span> <span class="n">animatableRadialGradient</span><span class="o">&lt;</span><span class="kt">BaseShape</span><span class="p">:</span> <span class="kt">Shape</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="nv">baseShape</span><span class="p">:</span> <span class="kt">BaseShape</span><span class="p">,</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">centerPoint</span><span class="p">:</span> <span class="kt">UnitPoint</span> <span class="o">=</span> <span class="o">.</span><span class="n">center</span><span class="p">,</span>
+        <span class="nv">startRadius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">endRadius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="kt">CGFloat</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<div align="center">What you&rsquo;re using 👆</div>
+
+<p></br></p>
+<pre class="highlight swift"><code><span class="kt">Color</span><span class="o">.</span><span class="n">clear</span>
+    <span class="o">.</span><span class="nf">animatableRadialGradient</span><span class="p">(</span>
+        <span class="nv">baseShape</span><span class="p">:</span> <span class="kt">RoundedRectangle</span><span class="p">(</span><span class="nv">cornerRadius</span><span class="p">:</span> <span class="mi">24</span><span class="p">),</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemPurple</span><span class="p">,</span> <span class="o">.</span><span class="n">systemBlue</span><span class="p">,</span> <span class="o">.</span><span class="n">systemGreen</span><span class="p">,</span> <span class="o">.</span><span class="n">white</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemGray</span><span class="p">,</span> <span class="o">.</span><span class="n">systemPink</span><span class="p">,</span> <span class="o">.</span><span class="n">systemOrange</span><span class="p">,</span> <span class="o">.</span><span class="n">black</span><span class="p">],</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="n">animationCompletion</span>
+    <span class="p">)</span>
+</code></pre>
+
+<div align="center">How you might use it 👆</div>
+
+<p></br></p>
+<h4 id='example' class='heading'>📸 Example</h4>
+
+<div align="center">
+  <img src="./Assets/Screenshots/radial-gradient-example-recording-1.gif" width="400px">
+</div>
+<h3 id='animatable-angular-gradients' class='heading'>Animatable Angular Gradients</h3>
+<h4 id='usage-on-shapes' class='heading'>Usage on Shapes</h4>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Shape</span> <span class="p">{</span>
+
+    <span class="c1">/// - Parameters:</span>
+    <span class="c1">///   - fullSpanStartAngle: Setting this property will cause the gradient to being at</span>
+    <span class="c1">///         the specified offset, and then span the entire circumference. (Default: `nil`)</span>
+    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">animatableAngularGradient</span> <span class="p">(</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">centerPoint</span><span class="p">:</span> <span class="kt">UnitPoint</span> <span class="o">=</span> <span class="o">.</span><span class="n">center</span><span class="p">,</span>
+        <span class="nv">fullSpanStartAngle</span><span class="p">:</span> <span class="kt">Angle</span><span class="p">,</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="kt">CGFloat</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+
+
+    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">animatableAngularGradient</span> <span class="p">(</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">centerPoint</span><span class="p">:</span> <span class="kt">UnitPoint</span> <span class="o">=</span> <span class="o">.</span><span class="n">center</span><span class="p">,</span>
+        <span class="nv">startAngle</span><span class="p">:</span> <span class="kt">Angle</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">,</span>
+        <span class="nv">endAngle</span><span class="p">:</span> <span class="kt">Angle</span> <span class="o">=</span> <span class="o">.</span><span class="nf">radians</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="o">.</span><span class="n">pi</span><span class="p">),</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="kt">CGFloat</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<div align="center">What you&rsquo;re using 👆</div>
+
+<p></br></p>
+<pre class="highlight swift"><code><span class="kt">RoundedRectangle</span><span class="p">(</span><span class="nv">cornerRadius</span><span class="p">:</span> <span class="mi">24</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">animatableAngularGradient</span><span class="p">(</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemPurple</span><span class="p">,</span> <span class="o">.</span><span class="n">systemBlue</span><span class="p">,</span> <span class="o">.</span><span class="n">systemGreen</span><span class="p">,</span> <span class="o">.</span><span class="n">white</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemGray</span><span class="p">,</span> <span class="o">.</span><span class="n">systemPink</span><span class="p">,</span> <span class="o">.</span><span class="n">systemOrange</span><span class="p">,</span> <span class="o">.</span><span class="n">systemRed</span><span class="p">],</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="n">animationCompletion</span>
+    <span class="p">)</span>
+</code></pre>
+
+<div align="center">How you might use it 👆</div>
+
+<p></br></p>
+<h4 id='usage-on-views' class='heading'>Usage on Views</h4>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="c1">/// - Parameters:</span>
+    <span class="c1">///   - fullSpanStartAngle: Setting this property will cause the gradient to being at</span>
+    <span class="c1">///         the specified offset, and then span the entire circumference. (Default: `nil`)</span>
+    <span class="kd">public</span> <span class="kd">func</span> <span class="n">animatableAngularGradient</span><span class="o">&lt;</span><span class="kt">BaseShape</span><span class="p">:</span> <span class="kt">Shape</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="nv">baseShape</span><span class="p">:</span> <span class="kt">BaseShape</span><span class="p">,</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">centerPoint</span><span class="p">:</span> <span class="kt">UnitPoint</span> <span class="o">=</span> <span class="o">.</span><span class="n">center</span><span class="p">,</span>
+        <span class="nv">fullSpanStartAngle</span><span class="p">:</span> <span class="kt">Angle</span><span class="p">,</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="kt">CGFloat</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+
+
+    <span class="kd">public</span> <span class="kd">func</span> <span class="n">animatableAngularGradient</span><span class="o">&lt;</span><span class="kt">BaseShape</span><span class="p">:</span> <span class="kt">Shape</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="nv">baseShape</span><span class="p">:</span> <span class="kt">BaseShape</span><span class="p">,</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="p">],</span>
+        <span class="nv">centerPoint</span><span class="p">:</span> <span class="kt">UnitPoint</span> <span class="o">=</span> <span class="o">.</span><span class="n">center</span><span class="p">,</span>
+        <span class="nv">startAngle</span><span class="p">:</span> <span class="kt">Angle</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">,</span>
+        <span class="nv">endAngle</span><span class="p">:</span> <span class="kt">Angle</span> <span class="o">=</span> <span class="o">.</span><span class="nf">radians</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="o">.</span><span class="n">pi</span><span class="p">),</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="kt">CGFloat</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<div align="center">What you&rsquo;re using 👆</div>
+
+<p></br></p>
+<pre class="highlight swift"><code><span class="kt">Color</span><span class="o">.</span><span class="n">clear</span>
+    <span class="o">.</span><span class="nf">animatableAngularGradient</span><span class="p">(</span>
+        <span class="nv">baseShape</span><span class="p">:</span> <span class="kt">RoundedRectangle</span><span class="p">(</span><span class="nv">cornerRadius</span><span class="p">:</span> <span class="mi">24</span><span class="p">),</span>
+        <span class="nv">startColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemPurple</span><span class="p">,</span> <span class="o">.</span><span class="n">systemBlue</span><span class="p">,</span> <span class="o">.</span><span class="n">systemGreen</span><span class="p">,</span> <span class="o">.</span><span class="n">white</span><span class="p">],</span>
+        <span class="nv">endColors</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">systemGray</span><span class="p">,</span> <span class="o">.</span><span class="n">systemPink</span><span class="p">,</span> <span class="o">.</span><span class="n">systemOrange</span><span class="p">,</span> <span class="o">.</span><span class="n">systemRed</span><span class="p">],</span>
+        <span class="nv">completionPercentage</span><span class="p">:</span> <span class="n">animationCompletion</span>
+    <span class="p">)</span>
+</code></pre>
+
+<div align="center">How you might use it 👆</div>
+
+<p></br></p>
+<h4 id='example' class='heading'>📸 Example</h4>
+
+<div align="center">
+  <img src="./Assets/Screenshots/angular-gradient-example-recording-1.gif" width="400px">
+</div>
+<h3 id='️-edge-cases' class='heading'>⚠️ Edge Cases</h3>
+
+<ul>
+<li>If you pass a <code>completionPercentage</code> value less than 0, or greater than 1, it will automatically be clamped to the closer endpoint.</li>
+<li>Behind the scenes, the <code>startColors</code> and <code>endColors</code> arrays get zipped before the interpolated colors are computed. This means that if their sizes are different, the larger array will be trimmed down to the size of the smaller array, and the excess colors in the larger array won&rsquo;t be used.
+
+<ul>
+<li>As such, if either or both of the <code>startColors</code> and <code>endColors</code> arrays are empty, the gradient will have no colors passed to it and it will appear completely clear.</li>
+</ul></li>
+</ul>
+<h2 id='contributing' class='heading'>Contributing</h2>
+
+<p>Contributions to <code>AnimatableGradients</code> are most welcome. Check out some of the <a href="./.github/ISSUE_TEMPLATE/">issue templates</a> for more info.</p>
+<h2 id='roadmap' class='heading'>Roadmap</h2>
+
+<ul>
+<li>Mac Catalyst Support (?)</li>
+<li>watchOS Support (?)</li>
+<li>Playground Book</li>
+</ul>
+<h2 id='license' class='heading'>License</h2>
+
+<p>AnimatableGradients is available under the MIT license. See the <a href="./LICENSE">LICENSE file</a> for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright 2020 CypherPoet</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
