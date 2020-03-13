@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" />
   </a>
   <a href="https://github.com/CypherPoet/AnimatableGradients/actions?query=workflow%3ACI">
-      <img src="https://github.com/CypherPoet/AnimatableGradients/workflows/Swift-Build/badge.svg" alt="CI Status">
+      <img src="https://github.com/CypherPoet/AnimatableGradients/workflows/Swift%20Build/badge.svg" alt="CI Status">
   </a>
   <a href="https://twitter.com/cypher_poet">
     <img src="https://img.shields.io/badge/Contact-@cypher_poet-lightgrey.svg?style=flat" alt="Twitter: @cypher_poet" />
