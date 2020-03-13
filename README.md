@@ -1,5 +1,7 @@
 # SwiftUI Animatable Gradients
 
+_A collection of SwiftUI View Modifiers for creating animated color gradients._
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Swift-5.1-F06C33.svg" />
@@ -16,13 +18,6 @@
   <a href="https://twitter.com/cypher_poet">
     <img src="https://img.shields.io/badge/Contact-@cypher_poet-lightgrey.svg?style=flat" alt="Twitter: @cypher_poet" />
   </a>
-</p>
-
-
-<p align="center">
-
-_A collection of SwiftUI View Modifiers for creating animated color gradients._
-
 </p>
 
 
