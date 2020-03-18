@@ -430,7 +430,6 @@ Contributions to `AnimatableGradients` are most welcome. Check out some of the [
 
 - Mac Catalyst Support (?)
 - watchOS Support (?)
-- Playground Book
 
 
 
