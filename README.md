@@ -59,7 +59,7 @@ _A collection of SwiftUI View Modifiers for creating animated color gradients._
 let package = Package(
     //...
     dependencies: [
-        .package(url: "https://github.com/CypherPoet/AnimatableGradients", "0.1.1"),
+        .package(url: "https://github.com/CypherPoet/AnimatableGradients", from: "0.1.1"),
     ],
     //...
 )
